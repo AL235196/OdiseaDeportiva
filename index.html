@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odisea Deportiva</title>
+    <link rel="stylesheet" href="css/css-index/style.css" />
+    <link rel="stylesheet" href="css/css-index/header.css">
+    <link rel="stylesheet" href="css/css-index/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <img src="imgs/SVGS/odisea1.svg" alt="logo" class="logo" />
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slider -->
+<section class="heroe1">
+            <div class="carousel-slides">
+                <picture>
+                    <source srcset="imgs/1024/slider1024-1.jpg" media="(min-width: 1024px)">
+                    <source srcset="imgs/768/slider768-1.jpg" media="(min-width: 768px)">
+                    <img src="imgs/480/slider1.jpg" alt="slider1" class="active">
+                </picture>
+                <picture>
+                    <source srcset="imgs/1024/slider1024-2.jpg" media="(min-width: 1024px)">
+                    <source srcset="imgs/768/slider768-2.jpg" media="(min-width: 768px)">
+                    <img src="imgs/480/slider2.jpg" alt="slider2">
+                </picture>
+                <picture>
+                    <source srcset="imgs/1024/slider1024-3.jpg" media="(min-width: 1024px)">
+                    <source srcset="imgs/768/slider768-3.jpg" media="(min-width: 768px)">
+                    <img src="imgs/480/slider3.jpg" alt="slider3">
+                </picture>
+            </div>
+
+            <div class="carousel-indicators">
+                <button data-slide="0" class="active"></button>
+                <button data-slide="1"></button>
+                <button data-slide="2"></button>
+            </div>
+
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+        </section>
+
+        <h2>Camisas de temporada</h2>
+        <h3>Todas las camisas</h3>
+
+        <div class="camisasindex">
+            <img src="imgs/CAMISAS/arsenal.jpg" alt="camisa Arsenal" />
+            <img src="imgs/CAMISAS/barca.jpg" alt="camisa Barcelona" />
+            <img src="imgs/CAMISAS/liverpool.jpg" alt="camisa Liverpool" />
+            <div class="ver"><a href="catalogo.html">Ver más</a></div>
+        </div>
+
+        <h3>Nuestras Colecciones</h3>
+        <div class="colecciones">
+            <a href="catalogo.html"><img src="imgs/CAMISAS/realmadrid.webp" alt="Real Madrid" /></a>
+            <a href="catalogo.html"><img src="imgs/CAMISAS/america.webp" alt="América" /></a>
+            <a href="catalogo.html"><img src="imgs/CAMISAS/alemania.avif" alt="Alemania" /></a>
+            <a href="catalogo.html"><img src="imgs/CAMISAS/realma.jpg" alt="Real Madrid Alternativa" /></a>
+            <a href="catalogo.html"><img src="imgs/CAMISAS/barcel.jpg" alt="Barcelona Alternativa" /></a>
+            <a href="catalogo.html"><img src="imgs/CAMISAS/ronaldo2008.jpg" alt="Ronaldo 2008" /></a>
+        </div>
+
+        <!-- Sobre Nosotros -->
+        <section class="sobre">
+            <div class="sobre-img-container">
+                <picture>
+                    <source srcset="imgs/SOBRE NOSOTROS/sn1024.jpg" media="(min-width: 1024px)">
+                    <source srcset="imgs/SOBRE NOSOTROS/sn768.jpg" media="(min-width: 768px)">
+                    <img class="nosotros-img" src="imgs/SOBRE NOSOTROS/sn480.jpg" alt="Sobre nosotros">
+                </picture>
+                <a href="SobreNosotros.html" class="btn-sobre">Sobre Nosotros</a>
+            </div>
+            <div class="info">
+                <div class="nosotros">
+                    <img src="imgs/SVGS/almuerzo-cohete.svg" alt="envío gratuito">
+                    <h3>Envío<br>Gratuito</h3>
+                </div>
+                <div class="nosotros">
+                    <img src="imgs/SVGS/carrito-de-compras.svg" alt="pago seguro">
+                    <h3>Pago<br>Seguro</h3>
+                </div>
+                <div class="nosotros">
+                    <img src="imgs/SVGS/mano-sosteniendo-corazon.svg" alt="reseñas">
+                    <h3>Buenas<br>Reseñas</h3>
+                </div>
+                <div class="nosotros">
+                    <img src="imgs/SVGS/apreton-de-manos.svg" alt="buen contacto">
+                    <h3>Buen<br>Contacto</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dudas -->
+        <section class="dudas">
+            <picture>
+                <source srcset="imgs/DUDAS/DUDAS1024.jpg" media="(min-width: 1024px)">
+                <source srcset="imgs/DUDAS/DUDAS768.jpg" media="(min-width: 768px)">
+                <img class="dudas-img" src="imgs/DUDAS/DUDAS480.jpg" alt="Dudas frecuentes">
+            </picture>
+            <h3>¿Alguna duda? ¡Contáctanos!</h3>
+            <a href="contacto.html">Contacto</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-redes">
+            <a href="https://www.tiktok.com/es/" aria-label="Tiktok">
+                <img class="tt" src="imgs/imgs-cn/tiktokclean (1).png" alt="Tiktok">
+            </a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img class="fb" src="imgs/imgs-cn/facebookclean.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="imgs/imgs-cn/instagramclean (1).png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("nav-menu").classList.toggle("hidden");
+        });
+    </script>
+    <script>
+        const slides = document.querySelectorAll(".carousel-slides img");
+        const indicators = document.querySelectorAll(".carousel-indicators button");
+        const nextBtn = document.querySelector(".carousel-control.next");
+        const prevBtn = document.querySelector(".carousel-control.prev");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+                indicators[i].classList.toggle("active", i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            showSlide((currentIndex + 1) % slides.length);
+        }
+
+        function prevSlide() {
+            showSlide((currentIndex - 1 + slides.length) % slides.length);
+        }
+
+        indicators.forEach((btn, i) => {
+            btn.addEventListener("click", () => showSlide(i));
+        });
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+footer {
+  background-color: #cc9b3a;
+  padding: 30px;
+  width: 100%;
+
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: flex-end;
+
+  max-width: 1200px;
+  margin-left: auto;
+}
+
+.footer-redes img {
+  width: auto;
+  height: 60px;
+  transition: transform .5s;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.5);
+}

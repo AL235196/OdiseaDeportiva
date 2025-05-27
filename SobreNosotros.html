@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/css-index/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Sobre Nosotros</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-img {
+        background-image: url(img-SN/portada.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 440px;
+        border-radius: 10px;
+    }
+
+    body {
+        background-color: #150101;
+        width: 100%;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .container {
+        background: #cc9b3a;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 1024px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 0 auto; /* ✅ CENTRAR CONTENIDO */
+    }
+    h1{
+        font-family: "Jersey 10", sans-serif;
+    }
+
+    .container img.main-img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .description {
+        margin-top: 15px;
+        font-size: 1.1em;
+        font-family: "Montserrat", sans-serif;
+        color: #000000;
+    }
+
+    .icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80px;
+        cursor: pointer;
+    }
+
+    .icon-box img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .icon-box img:hover {
+        transform: scale(1.1);
+    }
+
+    .toggle-text {
+        display: none;
+        margin-top: 8px;
+        color: #555;
+        font-size: 0.9em;
+        width: 300px;
+    }
+
+    .icon-box.active .toggle-text {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .main-img {
+            background-image: url(img-SN/portada4.jpg);
+            height: 480px;
+        }
+
+        .toggle-text {
+            width: 220px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .icons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-box {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .main-img {
+            background-image: url(img-SN/portada3.jpg);
+            height: 480px;
+        }
+
+        .toggle-text {
+            width: 300px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+        <header>
+        <div class="nav-container">
+            <img src="imgs/SVGS/odisea1.svg" alt="logo" class="logo" />
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Cátalogo</a></li>
+                <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Sobre Nosotros</h1> <br>
+        <div class="container">
+            <div class="main-img"></div>
+
+            <div class="description">
+                Somos una tienda online especializada en la venta de uniformes deportivos de fútbol soccer. Nacimos con
+                la idea de que todos los equipos, sin importar su nivel o presupuesto, merecen uniformes que los hagan
+                sentir orgullosos dentro y fuera de la cancha.
+
+                Contamos con una amplia variedad de modelos, colores y opciones de personalización para que cada
+                conjunto sea único. Nuestro equipo está formado por diseñadores, deportistas y especialistas textiles
+                que entienden la importancia de combinar estilo, comodidad y funcionalidad en cada uniforme.
+
+                Desde equipos infantiles hasta ligas amateurs y torneos locales, trabajamos para que cada jugador lleve
+                con orgullo su camiseta. Porque para nosotros, cada uniforme cuenta una historia, y queremos ayudarte a
+                contar la tuya.
+            </div>
+
+            <div class="icons">
+                <div class="icon-box" onclick="toggleText(this)">
+                    <p>Misión</p> <br>
+                    <img src="img-sn/logo1.png" alt="Icono 1">
+                    <div class="toggle-text">Brindar uniformes deportivos de fútbol soccer de alta calidad,
+                        personalizados y accesibles, que promuevan el espíritu de equipo, el rendimiento y la identidad
+                        de cada jugador y club, desde ligas amateurs hasta profesionales.</div>
+                </div>
+                <div class="icon-box" onclick="toggleText(this)">
+                    <p>Visión</p> <br>
+                    <img src="img-SN/logo2.png" alt="Icono 2">
+                    <div class="toggle-text">Ser la tienda online líder en Latinoamérica en venta de uniformes
+                        deportivos de fútbol, reconocida por nuestra innovación, rapidez de entrega, personalización
+                        única y compromiso con la excelencia deportiva.</div>
+                </div>
+                <div class="icon-box" onclick="toggleText(this)">
+                    <p>Valores</p> <br>
+                    <img src="img-sn/logo3.png" alt="Icono 3">
+                    <div class="toggle-text">
+                        Pasión por el deporte: Compartimos el amor por el fútbol en cada prenda que
+                        confeccionamos. <br><br>
+
+                        Calidad: Utilizamos materiales resistentes, cómodos y de alto rendimiento. <br><br>
+
+                        Personalización: Diseños únicos que representan la identidad de cada equipo. <br><br>
+
+                        Compromiso: Cumplimos con tiempos de entrega y atención personalizada. <br><br>
+
+                        Accesibilidad: Precios justos sin comprometer la calidad. <br><br>
+
+                        Trabajo en equipo: Colaboramos con nuestros clientes para crear soluciones deportivas a medida.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="footer-redes">
+        <a href="https://www.tiktok.com/es/" aria-label="Tiktok">
+            <img class="tt" src="imgs/imgs-cn/tiktokclean (1).png" alt="Teléfono">
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img class="fb" src="imgs/imgs-cn/facebookclean.png" alt="Facebook">
+        </a>
+
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="imgs/imgs-cn/instagramclean (1).png" alt="Instagram">
+        </a>
+
+    </div>
+</footer>
+        <script>
+            function toggleText(clickedBox) {
+                const allBoxes = document.querySelectorAll('.icon-box');
+                allBoxes.forEach(box => {
+                    if (box !== clickedBox) {
+                        box.classList.remove('active');
+                    }
+                });
+                clickedBox.classList.toggle('active');
+            }
+        </script>
+    <script>
+        // Menú hamburguesa
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("nav-menu").classList.toggle("hidden");
+        });
+
+    </script>
+</body>
+
+</html>

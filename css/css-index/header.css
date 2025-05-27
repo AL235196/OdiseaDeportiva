@@ -1,0 +1,83 @@
+
+header {
+  background-color: #cc9b3a;
+  padding: 0.5rem 1rem;
+  position: relative;
+  background-image: url(/imgs/header-texture.png);
+  background-blend-mode: soft-light ;
+  
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin: auto;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+a{
+  font-family:"Jersey 10", sans-serif;
+  font-size:larger;
+  color: black;
+}
+nav ul li {
+  margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MEDIA QUERY PARA TABLET / DESKTOP */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block !important;
+    background-color: transparent;
+    position: static;
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: var(--light-color);
+  }
+}

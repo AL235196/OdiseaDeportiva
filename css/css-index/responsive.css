@@ -1,0 +1,64 @@
+/* MEDIA QUERY PARA TABLET / DESKTOP */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block !important;
+    background-color: transparent;
+    position: static;
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: var(--light-color);
+  }
+  
+  /* Ajustes adicionales para pantallas grandes */
+  .heroe1 .carousel-slides {
+    height: 500px; /* Ajusta según necesites */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Eliminamos las reglas de content url ya que ahora usamos picture */
+  
+  /* Ajustes para tablet */
+  .heroe1 .carousel-slides {
+    height: 400px; /* Ajusta según necesites */
+  }
+  
+  .camisasindex {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .colecciones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .sobre {
+    flex-direction: row;
+  }
+  
+  .sobre-img-container {
+    flex: 1;
+  }
+  
+  .info {
+    flex: 1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

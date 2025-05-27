@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo_contacto.css">
+    <link rel="stylesheet" href="css/css-index/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+    <header>
+        <div class="nav-container">
+            <img src="imgs/SVGS/odisea1.svg" alt="logo" class="logo" />
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Cátalogo</a></li>
+                <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+
+    <body>
+        <br><br>
+
+        <h2 class="titulo-decorado">¡Contáctanos, <br>queremos conocerte!</h2>
+
+
+
+        <form action="#" method="post" class="formulario" id="miFormulario">
+            <h1>Formulario de Contacto</h1>
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <div>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" required>
+            </div>
+
+            <div>
+                <label for="talla">Talla:</label>
+                <select id="talla" name="talla" required>
+                    <option value="">--Selecciona tu talla--</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="mensaje">Mensaje (opcional):</label>
+                <textarea id="mensaje" name="mensaje" rows="3" cols="30"
+                    placeholder="Escribe un mensaje si lo deseas..."></textarea>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        <h2 class="titulo-decorado">¡Échate un taco de ojo <br>
+            con nuestros ídolos!</h2>
+        <br>
+        <div class="slider">
+            <div class="slides">
+                <img src="imgs/imgs-cn/ronaldo1.jpg" alt="slide-img">
+                <img src="imgs/imgs-cn/kaka2.jpg" alt="slide-img">
+                <img src="imgs/imgs-cn/kasillas3.jpg" alt="slide-img">
+            </div>
+        </div>
+
+    </body>
+
+</main>
+<footer class="footer">
+    <div class="footer-redes">
+        <a href="https://www.tiktok.com/es/" aria-label="Tiktok">
+            <img class="tt" src="imgs/imgs-cn/tiktokclean (1).png" alt="Teléfono">
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img class="fb" src="imgs/imgs-cn/facebookclean.png" alt="Facebook">
+        </a>
+
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="imgs/imgs-cn/instagramclean (1).png" alt="Instagram">
+        </a>
+
+    </div>
+</footer>
+<script>
+    document.getElementById("miFormulario").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("¡Los datos se han guardado correctamente!");
+        this.reset();
+    });
+</script>
+<script>
+    function actualizarImagenes() {
+        const imagenes = document.querySelectorAll('.slide-img');
+        const width = window.innerWidth;
+        let carpeta = "480"; // valor por defecto
+
+        if (width >= 1024) {
+            carpeta = "1024";
+        } else if (width >= 768) {
+            carpeta = "768";
+        }
+
+        imagenes.forEach((img, index) => {
+            img.src = `elementos/IMGS/${carpeta}/slider${index + 1}.jpg`;
+        });
+    }
+
+    window.addEventListener('load', actualizarImagenes);
+    window.addEventListener('resize', actualizarImagenes);
+</script>
+    <script>
+        // Menú hamburguesa
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("nav-menu").classList.toggle("hidden");
+        });
+
+        // Slider automático
+        const slides = document.querySelectorAll(".slider-img");
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }, 3000);
+    </script>
+
+
+
+
+</html>
